@@ -1,0 +1,9 @@
+setuptools-rust
+openai-whisper
+setuptools
+wheel
+spacy
+streamlit
+watchdog
+ollama
+httpx
