@@ -3,6 +3,8 @@ FROM python:latest
 
 RUN apt-get update
 
+RUN apt install build-essential python3-dev -y
+
 ENV TZ=America/New_York
 
 WORKDIR /app
