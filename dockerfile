@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install --upgrade pip setuptools wheel cython
 
-RUN pip install spacy -vv
+RUN pip install spacy -vvv
 
 ENV TZ=America/New_York
 
