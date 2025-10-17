@@ -1,15 +1,7 @@
 # syntax=docker/dockerfile:1.7-labs
 FROM python:3.10
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    python3-dev \
-    gcc \
-    g++
-
-RUN pip install --upgrade pip setuptools wheel cython
-
-# RUN pip install spacy -vvv
+RUN apt-get update
 
 ENV TZ=America/New_York
 
