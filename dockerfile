@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     gcc \
     g++
 
+RUN pip install --upgrade pip setuptools wheel cython -y
+
 ENV TZ=America/New_York
 
 WORKDIR /app
