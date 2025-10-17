@@ -1,9 +1,11 @@
 # syntax=docker/dockerfile:1.7-labs
 FROM python:latest
 
-RUN apt-get update
-
-RUN apt install build-essential python3-dev -y
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    python3-dev \
+    gcc \
+    g++
 
 ENV TZ=America/New_York
 
