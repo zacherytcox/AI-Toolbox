@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: ai-toolboxf
-        image: localhost:32000/mynginx:registry
+        image: microk8s-1:32000/ai-toolbox:registry
         ports:
         - containerPort: 8501
         env:
@@ -38,7 +38,7 @@ spec:
   selector:
     app: ai-toolbox
   type: LoadBalancer
-  loadBalancerIP: 192.168.70.201 
+  loadBalancerIP: 192.168.70.201
   ports:
   - port: 8501
     targetPort: 8501
