@@ -21,7 +21,7 @@ spec:
         app: ai-toolbox
     spec:
       containers:
-      - name: ai-toolboxf
+      - name: ai-toolbox
         image: microk8s-1:32000/ai-toolbox:registry
         ports:
         - containerPort: 8501
