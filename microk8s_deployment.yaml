@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: ai-toolbox
-        image: microk8s-1:32000/ai-toolbox:registry
+        image: microk8s-1:32000/ai-toolbox:latest
         ports:
         - containerPort: 8501
         env:
