@@ -63,6 +63,7 @@ def system_panel():
             else:
                 st.write("_Install `psutil` for more metrics_")
 
+system_panel()
 
 st.title("AI Tools 📝")
 
