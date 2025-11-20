@@ -3,6 +3,8 @@ import uuid
 import json
 import spacy
 import streamlit as st
+import spacy.cli
+from spacy.util import is_package
 
 
 def sample_email_text():
@@ -40,6 +42,13 @@ To: Samantha Wills
 CC: Team
 Date: January 3
 """
+
+def ensure_en_core_web_trf():
+    if not is_package("en_core_web_trf"):
+        st.toast("Model not found, downloading en_core_web_trf...")
+        spacy.cli.download("en_core_web_trf")
+    else:
+        st.toast("Model en_core_web_trf is already installed.")
 
 class DataPseudonymizer:
     def __init__(self):
@@ -138,6 +147,7 @@ def pseudonymizer():
 
     # --- Initialize Pseudonymizer ---
     if st.session_state.get("pseudonymizer", None) is None:
+        ensure_en_core_web_trf()
         st.session_state.pseudonymizer = DataPseudonymizer()
         pseudonymizer = st.session_state.pseudonymizer
     else:
