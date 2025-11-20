@@ -42,11 +42,6 @@ CC: Team
 Date: January 3
 """
 
-@st.dialog("Downloading Spacy Model")
-def download_trf_model():
-    with st.spinner("Downloading Spacy Model en_core_web_trf..."):
-        spacy.cli.download("en_core_web_trf")
-
 class DataPseudonymizer:
     def __init__(self):
         self.uid = str(uuid.uuid4())
@@ -144,7 +139,6 @@ def pseudonymizer():
 
     # --- Initialize Pseudonymizer ---
     if st.session_state.get("pseudonymizer", None) is None:
-        download_trf_model()
         st.session_state.pseudonymizer = DataPseudonymizer()
         pseudonymizer = st.session_state.pseudonymizer
     else:
