@@ -24,10 +24,10 @@ spec:
       - name: ai-toolbox
         image: localhost:32000/ai-toolbox:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8501
         env:
         - name: STREAMLIT_SERVER_PORT
-          value: 80
+          value: "8501"
 # ---
 # apiVersion: v1
 # kind: Service
