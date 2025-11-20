@@ -3,7 +3,6 @@ import uuid
 import json
 import spacy
 import streamlit as st
-import spacy.cli
 
 
 def sample_email_text():
