@@ -1,7 +1,7 @@
-setuptools-rust
-openai-whisper
-setuptools
-wheel
+# setuptools-rust
+# openai-whisper
+# setuptools
+# wheel
 # spacy
 streamlit
 # watchdog
