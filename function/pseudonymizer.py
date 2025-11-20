@@ -3,6 +3,7 @@ import uuid
 import json
 import spacy
 import streamlit as st
+import spacy.cli
 
 
 def sample_email_text():
@@ -41,6 +42,10 @@ CC: Team
 Date: January 3
 """
 
+@st.dialog("Downloading Spacy Model")
+def download_trf_model():
+    with st.spinner("Downloading Spacy Model en_core_web_trf..."):
+        spacy.cli.download("en_core_web_trf")
 
 class DataPseudonymizer:
     def __init__(self):
@@ -139,6 +144,7 @@ def pseudonymizer():
 
     # --- Initialize Pseudonymizer ---
     if st.session_state.get("pseudonymizer", None) is None:
+        download_trf_model()
         st.session_state.pseudonymizer = DataPseudonymizer()
         pseudonymizer = st.session_state.pseudonymizer
     else:
