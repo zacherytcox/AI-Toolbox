@@ -3,6 +3,8 @@ FROM python:3.10
 
 RUN apt-get update
 
+RUN apt-get install ffmpeg -y
+
 ENV TZ=America/New_York
 
 WORKDIR /app
