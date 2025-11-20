@@ -2,7 +2,7 @@ setuptools-rust
 openai-whisper
 setuptools
 wheel
-spacy
+spacy==3.8.2
 streamlit
 watchdog
 ollama
