@@ -1,9 +1,9 @@
-# setuptools-rust
-# openai-whisper
-# setuptools
-# wheel
-# spacy
+setuptools-rust
+openai-whisper
+setuptools
+wheel
+spacy
 streamlit
-# watchdog
+watchdog
 ollama
 httpx

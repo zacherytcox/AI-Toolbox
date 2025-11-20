@@ -31,8 +31,8 @@ tab1, tab2, tab3 = st.tabs(["Speech to Text 🎙️", "Pseudonymizer 🎭", "Exp
 
 with tab1:
     stt_gui(display=True, label_prefix='stt')
-# with tab2:
-    # pseudon_gui()
+with tab2:
+    pseudon_gui()
 # with tab3:
 #     explain_gui()
 
